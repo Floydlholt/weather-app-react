@@ -10,7 +10,7 @@ class Forms extends React.Component {
 
                 <input type="text" name="country" placeholder="Country..."/>
 
-                <a class="waves-effect waves-light btn">GET WEATHER</a>
+                <button class="blue waves-effect waves-light btn">GET WEATHER</button>
             </form>
         );
     }

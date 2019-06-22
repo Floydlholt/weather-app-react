@@ -6,7 +6,7 @@ import Forms from './components/Forms';
 import Weather from './components/Weather';
 
 // OpenWeather API key
-const API_KEY = "58182cc7ba309036c9ea516800a5be02";
+const API_KEY = `58182cc7ba309036c9ea516800a5be02`;
 
 
 
@@ -28,7 +28,9 @@ class App extends React.Component {
     e.preventDefault();
     const city = e.target.city.value;
     const country = e.target.country.value;
-    const apiCall  = await fetch('https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric');
+    const apiCall  = await fetch( 
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&appid=${API_KEY}&units=metric`
+    );
 
     const data = await apiCall.json();
     if (city && country) {
